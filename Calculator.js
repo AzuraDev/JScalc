@@ -11,7 +11,7 @@ var p;
 var sum;
 var num2;
 var num1;
-var x1;
+var x1 = 0;
 document.onkeydown = calc;
 
 function calc(e) {
