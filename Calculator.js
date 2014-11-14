@@ -8,27 +8,22 @@ var p3 = '+';
 var p2 = '*';
 var p1 = '-';
 var p = '/';
-var sum;
-var num2;
-var num1;
-var x1 = 0;
-var z = 0;
 /*Were The Variables Are Stored
 And Kept In The Script*/
 document.onkeydown = calc;
 
 function calc(e) {
     if (e.keyCode === 50) {
-        num1 = prompt('Enter Num 1');
+        var num1 = prompt('Enter Num 1');
         pr = prompt('Calc With');
-        num2 = prompt('Enter Num 2 ');
+        var num2 = prompt('Enter Num 2 ');
         /*The Input Sequence, Logs What
         Numbers And Signs You Entered*/
-        x1 = 0;
+        var x1 = 0;
         x = parseFloat(num1);
         y = parseFloat(num2);
         if (p === pr) {
-            sum = x / y;
+            var sum = x / y;
         } else if (p1 === pr) {
             sum = x - y;
         } else if (p2 === pr) {
@@ -58,5 +53,13 @@ function calc(e) {
         /*Output System, Outputs The Things That Were Inputed
         And The Things That Were Checked, This Is What
         You See When You Get Your Answer*/
+    } else if (e.keyCode === 49) {
+        var x = prompt('Enter Coord 1 x');
+        var y = prompt('Enter Coord 1 y');
+        var x1 = prompt('Enter Coord 2 x');
+        var y1 = prompt('Enter Coord 2 y');
+      var Distance = Math.sqrt(x1 - x) * (x1 - x) + (y1 - y) * (y1 - y);
+        alert(Distance);
+        /*Calculates Distance*/
     }
 }
