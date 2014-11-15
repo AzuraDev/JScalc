@@ -1,6 +1,7 @@
 javascript:
 
 var pr;
+var formulas;
 var p6 = 'sqr';
 var p5 = 'sin';
 var p4 = 'cos';
@@ -54,12 +55,25 @@ function calc(e) {
         And The Things That Were Checked, This Is What
         You See When You Get Your Answer*/
     } else if (e.keyCode === 49) {
-        var x = prompt('Enter Coord 1 x');
-        var y = prompt('Enter Coord 1 y');
-        var x1 = prompt('Enter Coord 2 x');
-        var y1 = prompt('Enter Coord 2 y');
-      var Distance = Math.sqrt(x1 - x) * (x1 - x) + (y1 - y) * (y1 - y);
-        alert(Distance);
-        /*Calculates Distance*/
+        var Dist = 'Dist';
+        var Slope = 'Slope';
+        var formulas = prompt('Enter a formula');
+        if (formulas === Dist) {
+            var x = prompt('Enter Coord 1 x');
+            var y = prompt('Enter Coord 1 y');
+            var x1 = prompt('Enter Coord 2 x');
+            var y1 = prompt('Enter Coord 2 y');
+            var Distance = Math.sqrt(x1 - x) * (x1 - x) + (y1 - y) * (y1 - y);
+            alert(Distance);
+            /*Calculates Distance*/
+        } else if (formulas === Slope) {
+            x = prompt('Enter x1');
+            y = prompt('Enter y1');
+            x1 = prompt('Enter x2');
+            y1 = prompt('Enter y2');
+            var slopeFormulaY = y1 - y;
+            var slopeFormulaX = x1 - x;
+            alert(slopeFormulaY + '/' + slopeFormulaX );
+        }
     }
 }
