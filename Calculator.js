@@ -72,8 +72,9 @@ function calc(e) {
             x1 = prompt('Enter x2');
             y1 = prompt('Enter y2');
             var slopeFormulaY = y1 - y;
-            var slopeFormulaX = x1 - x;
+            var slopeFormulax = x1 - x;
             alert(slopeFormulaY + '/' + slopeFormulaX );
+            /*Calculates Slope*/
         }
     }
 }
