@@ -57,13 +57,16 @@ function calc(e) {
     } else if (e.keyCode === 49) {
         var Dist = 'Dist';
         var Slope = 'Slope';
+        var py = 'Py';
+        var circ = 'Circle';
+        var Ellipse = 'Ellipse';
         var formulas = prompt('Enter a formula');
         if (formulas === Dist) {
             var x = prompt('Enter Coord 1 x');
             var y = prompt('Enter Coord 1 y');
             var x1 = prompt('Enter Coord 2 x');
             var y1 = prompt('Enter Coord 2 y');
-            var Distance = Math.sqrt(x1 - x) * (x1 - x) + (y1 - y) * (y1 - y);
+            var Distance = Math.sqrt((x - x1) * (x - x1) + (y - y1) * (y - y1));
             alert(Distance);
             /*Calculates Distance*/
         } else if (formulas === Slope) {
@@ -72,9 +75,26 @@ function calc(e) {
             x1 = prompt('Enter x2');
             y1 = prompt('Enter y2');
             var slopeFormulaY = y1 - y;
-            var slopeFormulax = x1 - x;
-            alert(slopeFormulaY + '/' + slopeFormulaX );
+            var slopeFormulaX = x1 - x;
+            alert(slopeFormulaY + '/' + slopeFormulaX);
             /*Calculates Slope*/
+        } else if (formulas === py) {
+            var a2 = prompt('A2');
+            var b2 = prompt('b2');
+            var c = Math.sqrt(a2 * a2 + b2 * b2);
+            var pytha = c;
+            alert(pytha);
+            /*Calculates Pythagoreans Theroum*/
+        } else if (formulas === Ellipse) {
+            var r1 = prompt('Radi 1');
+            var r2 = prompt('Radi 2');
+            var pi = Math.PI;
+            var answer = pi * r1 * r2;
+            alert(answer);
+        } else if (formulas === circ) {
+            r1 = prompt('Radi');
+            var Area = Math.PI * r1 * r1;
+            alert(Area);
         }
     }
 }
