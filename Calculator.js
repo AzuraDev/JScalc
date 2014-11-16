@@ -60,6 +60,7 @@ function calc(e) {
         var py = 'Py';
         var circ = 'Circle';
         var Ellipse = 'Ellipse';
+        var Sphere = 'Sphere';
         var formulas = prompt('Enter a formula');
         if (formulas === Dist) {
             var x = prompt('Enter Coord 1 x');
@@ -95,6 +96,11 @@ function calc(e) {
             r1 = prompt('Radi');
             var Area = Math.PI * r1 * r1;
             alert(Area);
+        } else if (formulas === Sphere) {
+            r1 = prompt('Radi');
+            var Volume = 4 / 3 * Math.PI * r1 * r1 * r1;
+            alert(Volume);
+            /*Calculate Volume Of A Sphere*/
         }
     }
 }
