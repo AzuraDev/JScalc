@@ -63,6 +63,7 @@ function calc(e) {
         var Ellipse = 'Ellipse';
         var Pyramid = 'Pyramid';
         var Cone = 'Cone';
+        var Cyl = 'Cyl';
         var formulas = prompt('Enter a formula');
         if (formulas === Dist) {
             variable = 1;
@@ -87,31 +88,38 @@ function calc(e) {
             var a2 = prompt('A2');
             var b2 = prompt('b2');
             var c = Math.sqrt(a2 * a2 + b2 * b2);
-            var answer = c;
+            answer = c;
             /*Calculates Pythagoreans Theroem*/
         } else if (formulas === Ellipse) {
             variable = 1;
             var r1 = prompt('Radi 1');
             var r2 = prompt('Radi 2');
             var pi = Math.PI;
-            var answer = pi * r1 * r2;
+            answer = pi * r1 * r2;
             /*Calculates Volume Of A Ellipse*/
         } else if (formulas === circ) {
+            variable = 1;
             r1 = prompt('Radi');
-            var answer = Math.PI * r1 * r1;
+            answer = Math.PI * r1 * r1;
             /*Calculates Volume Of A Circle*/
         } else if (formulas === Pyramid) {
             variable = 1;
             var l = prompt('Length');
-            var w = prompt('Width');
+            var w = prompt('Width');v
             var h = prompt('Height');
             answer = l * w * h / 3
             /*Calculates Volume Of A Pyramid*/
-        } else if(formulas === Cone){
-         r1 = prompt('Radi');
+        } else if (formulas === Cone) {
+            variable = 1;
+            r1 = prompt('Radi');
             h = prompt('Height');
             answer = (Math.PI * r1 * r1 * h) / 3;
             /*Calculates Volume Of A Cone*/
+        } else if (formulas === Cyl) {
+            variable = 1;
+            r1 = prompt('Radi');
+            h = prompt('Height');
+            answer = Math.PI * r1 * r1 * h;
         }
         alert(answer)
     }
