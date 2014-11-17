@@ -64,6 +64,7 @@ function calc(e) {
         var Pyramid = 'Pyramid';
         var Cone = 'Cone';
         var Cyl = 'Cyl';
+        var CtoFa = 'C';
         var formulas = prompt('Enter a formula');
         if (formulas === Dist) {
             variable = 1;
@@ -107,7 +108,7 @@ function calc(e) {
             var l = prompt('Length');
             var w = prompt('Width');
             var h = prompt('Height');
-            answer = l * w * h / 3
+            answer = l * w * h / 3;
             /*Calculates Volume Of A Pyramid*/
         } else if (formulas === Cone) {
             variable = 1;
@@ -120,7 +121,10 @@ function calc(e) {
             r1 = prompt('Radi');
             h = prompt('Height');
             answer = Math.PI * r1 * r1 * h;
+        } else if(formulas === CtoFa){
+            var c = prompt('Celcsius');
+           answer = c * 9/5 + 32;
         }
-        alert(answer)
+        alert(answer);
     }
 }
