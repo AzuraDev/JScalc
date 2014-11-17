@@ -105,7 +105,7 @@ function calc(e) {
         } else if (formulas === Pyramid) {
             variable = 1;
             var l = prompt('Length');
-            var w = prompt('Width');v
+            var w = prompt('Width');
             var h = prompt('Height');
             answer = l * w * h / 3
             /*Calculates Volume Of A Pyramid*/
